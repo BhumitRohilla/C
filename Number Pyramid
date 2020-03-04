@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(){
+    int row,a,b,c,n,m=1;
+    printf("Enter the number in row:\t");
+    scanf("%d", &row);
+    for(a=1;a<=row;a++){
+        for(b=1;b<=row-a;b++){
+            printf("_");
+        }
+
+        for(c=1;c<=a*2-1;c++){
+
+            printf("%d", m);
+                if(c<a){
+                    m++;
+                }
+                else{
+                    m--;
+                }
+        }
+
+        printf("\n");
+        m=1;
+    }
+}
