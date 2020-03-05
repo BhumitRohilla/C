@@ -1,0 +1,53 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[10][10], r, c, i, j,k,m,n;
+    printf("Enter number rows and columns: ");
+    scanf("%d %d", &r, &c);
+
+    printf("\nEnter element of matrix:\n");
+    for (i = 1; i <=r; ++i)
+        for (j = 1; j <=c; ++j) {
+            printf("Enter element a%d%d: ", i, j);
+            scanf("%d", &a[i][j]);
+        }
+     printf("\nMatrix you entered \n");
+    for (i = 1; i <=r; ++i)
+        for (j = 1; j <=c; ++j) {
+            printf("%d  ", a[i][j]);
+            if (j == c )
+                printf("\n");
+        }
+    getch();
+    printf("Enter the row and column of element you want to replace:\t");
+    scanf("%d%d", &m, &n);
+    printf("Enter the number");
+    scanf("%d", &k);
+    printf("Resultant array\n");
+    for (i = 1; i <=r; ++i){
+            if(i==m){
+                for (j = 1; j <=c; ++j) {
+                    if(j==n){
+                        a[i][j]=k;
+                    }
+                    printf("%d\t", a[i][j]);
+                    if (j == c ){
+                    printf("\n");
+                    }
+                }
+            }
+
+            else{
+                    for (j = 1; j <=c; ++j) {
+                    printf("%d\t", a[i][j]);
+                    if (j == c )
+                    printf("\n");
+                    }
+            }
+
+
+    }
+}
